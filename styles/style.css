@@ -1,0 +1,199 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400;700&family=Roboto:wght@300;400;700&display=swap");
+
+/* 
+INTER PESO: 300, 400 e 700
+ROBOTO PESO: 300, 400 e 700 
+*/
+
+:root {
+  --font-inter: "Inter";
+  --font-roboto: "Roboto";
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+body {
+  background-color: #444856;
+  color: white;
+  font-family: var(--font-inter);
+  display: flex;
+  width: 80%;
+}
+
+/* NAVBAR - index*/
+#navbar {
+  background-color: #31333b;
+  width: 20%;
+  height: 100%;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.navbar__wrapper {
+  height: 80%;
+  margin: auto 1em;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  gap: 1.8em;
+  align-items: flex-end;
+  width: 100%;
+}
+
+#navbar img {
+  width: 100px;
+}
+
+#navbar img:hover {
+  cursor: pointer;
+}
+
+#navbar h2 {
+  border-bottom: #7b7b7b 1.5px solid;
+  padding-bottom: 0.8em;
+  width: 100%;
+  text-align: right;
+}
+
+#navbar a {
+  border-bottom: #7b7b7b 1.5px solid;
+  color: white;
+  font-size: 18px;
+  font-weight: 300;
+  padding-bottom: 0.8em;
+  text-align: right;
+  text-decoration: none;
+  width: 100%;
+  transition: transform 0.4s ease-in-out;
+}
+
+#navbar a:hover {
+  transform: translateX(-10px);
+  color: rgba(255, 255, 255, 0.8);
+}
+
+/* MAIN hub-do-desenvolvedor - index*/
+#developer-hub {
+  display: flex;
+  flex-direction: column;
+  margin: 6em 0 0 6em;
+}
+
+#developer-hub h1 {
+  color: #9e9a9a;
+  margin-bottom: 2em;
+}
+
+#developer-hub h2 {
+  color: #f99101;
+  margin-bottom: 0.8em;
+}
+
+#developer-hub h3 {
+  color: #f99101;
+  margin-bottom: 1.8em;
+}
+
+#developer-hub h3 a {
+  color: #f99101;
+}
+
+#developer-hub > p {
+  margin-bottom: 2em;
+  font-size: 1.2em;
+  font-weight: 300;
+}
+
+.social-icons {
+  display: flex;
+  gap: 2em;
+}
+
+.social-icons__item {
+  justify-content: center;
+  align-items: center;
+  font-size: 1.5em;
+  font-weight: 300;
+}
+
+.social-icons__item a {
+  display: flex;
+  gap: 6px;
+  color: inherit;
+  text-decoration: none;
+}
+
+.social-icons__item :hover {
+  color: rgba(255, 255, 255, 0.65);
+}
+
+/* Youtube */
+.social-icons__item:hover .bxl-youtube::before {
+  color: red; /* Cor ao passar o mouse (vermelho) */
+}
+
+/* Instagram */
+.social-icons__item:hover .bxl-instagram::before {
+  color: #e4405f; /* Cor do Instagram */
+}
+
+/* Twitter */
+.social-icons__item:hover .bxl-twitter::before {
+  color: #1da1f2; /* Cor do Twitter */
+}
+
+/* LinkedIn */
+.social-icons__item:hover .bxl-linkedin-square::before {
+  color: #0077b5; /* Cor do LinkedIn */
+}
+
+/* TESTE */
+/* Esconder o modal inicialmente */
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.9);
+  padding-top: 60px;
+}
+
+/* Estilizar o conteúdo do modal */
+.modal-content {
+  display: block;
+  margin: auto;
+  max-width: 100%;
+  max-height: 100%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+/* Botão para fechar */
+.close {
+  position: absolute;
+  top: 15px;
+  right: 35px;
+  font-size: 40px;
+  font-weight: bold;
+  color: #fff;
+  cursor: pointer;
+}
+
+.close:hover {
+  color: rgba(255, 255, 255, 0.8);
+}

@@ -1,14 +1,103 @@
 <!DOCTYPE html>
-<html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles/style.css" />
     <title>Projeto My Components</title>
-</head>
+  </head>
+  <body>
+    <nav id="navbar">
+      <div class="navbar__wrapper">
+        <div class="image-trigger">
+          <img src="imagens/perfil.png" alt="Perfil" />
+        </div>
+        <div class="modal" id="modal">
+          <span class="close" id="close">&times;</span>
+          <img class="modal-content" id="modal-image" />
+        </div>
 
-<body>
+        <h2>Home</h2>
+        <a href="tipografia.html">Tipografia</a>
+        <a href="cards.html">Cards</a>
+        <a href="listas.html">Listas</a>
+        <a href="formulario.html">Formulário</a>
+        <a href="Botões">Botões</a>
+        <a href="Tabelas">Tabelas</a>
+      </div>
+    </nav>
 
-</body>
+    <main id="developer-hub">
+      <h1>My Component</h1>
+      <h2>A sua área para armazenar seus códigos em HTML e CSS</h2>
+      <h3>
+        Components criado por Daniel Morales para os cursos
+        <a href="#">Serliv</a>
+      </h3>
+      <p>
+        Desenvolvedor e instrutor de tecnologias front-end. Apaixonado por
+        ensinar e transformar positivamente a vida das pessoas
+      </p>
+      <h3>Vem conhecer nossa redes sociais</h3>
+      <div class="social-icons">
+        <div class="social-icons__item">
+          <a href="#">
+            <i class="bx bxl-youtube" style="color: #ffffff"></i>
+            <p>Youtube</p></a
+          >
+        </div>
 
+        <div class="social-icons__item">
+          <a href="#">
+            <i class="bx bxl-instagram" style="color: #ffffff"></i>
+            <p>Instagram</p></a
+          >
+        </div>
+
+        <div class="social-icons__item">
+          <a href="#"
+            ><i class="bx bxl-twitter" style="color: #ffffff"></i>
+            <p>Twitter</p></a
+          >
+        </div>
+
+        <div class="social-icons__item">
+          <a href="#">
+            <i class="bx bxl-linkedin-square" style="color: #ffffff"></i>
+            <p>Linkedin</p></a
+          >
+        </div>
+      </div>
+    </main>
+
+    <script>
+      // Selecionar elementos
+      var modal = document.getElementById("modal");
+      var modalImage = document.getElementById("modal-image");
+      var imageTrigger = document.querySelector(".image-trigger");
+      var close = document.getElementById("close");
+
+      // Adicionar evento de clique para abrir o modal
+      imageTrigger.addEventListener("click", function () {
+        modal.style.display = "block";
+        modalImage.src = this.querySelector("img").src;
+      });
+
+      // Adicionar evento de clique para fechar o modal
+      close.addEventListener("click", function () {
+        modal.style.display = "none";
+      });
+
+      // Adicionar evento de clique para fechar o modal ao clicar fora da imagem
+      window.addEventListener("click", function (event) {
+        if (event.target == modal) {
+          modal.style.display = "none";
+        }
+      });
+    </script>
+  </body>
 </html>
