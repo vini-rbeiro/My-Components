@@ -1,0 +1,35 @@
+/* nav */
+#navbar {
+  background-color: #31333b;
+  display: flex;
+  flex-direction: column;
+  width: 260px;
+  align-items: flex-end;
+  padding-right: 1em;
+  padding-top: 5em;
+
+  position: fixed;
+  height: 100vh;
+  overflow-y: auto;
+}
+
+#navbar img {
+  width: 100px;
+  margin-bottom: 2em;
+}
+
+#navbar a {
+  /* padding: 0.5em 0.2em 0.5em 0.5em; */
+  padding: 1.8em 0 1.2em 1.5em;
+  color: white;
+  text-decoration: none;
+  border-bottom: #7b7b7b 1px solid;
+  width: 100%;
+  text-align: right;
+  transition: 0.3s ease-in-out;
+}
+
+#navbar a:hover {
+  scale: 0.95;
+  color: #bdbfc7;
+}
