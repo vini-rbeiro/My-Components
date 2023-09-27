@@ -1,35 +1,34 @@
 /* nav */
 #navbar {
+  align-items: flex-end;
   background-color: #31333b;
   display: flex;
   flex-direction: column;
-  width: 260px;
-  align-items: flex-end;
-  padding-right: 1em;
-  padding-top: 5em;
-
-  position: fixed;
   height: 100vh;
   overflow-y: auto;
+  padding-right: 1em;
+  padding-top: 5em;
+  position: fixed;
+  width: 260px;
 }
 
 #navbar img {
-  width: 100px;
   margin-bottom: 2em;
+  width: 100px;
 }
 
 #navbar a {
-  /* padding: 0.5em 0.2em 0.5em 0.5em; */
-  padding: 1.8em 0 1.2em 1.5em;
-  color: white;
-  text-decoration: none;
   border-bottom: #7b7b7b 1px solid;
-  width: 100%;
+  color: white;
+  padding: 1.8em 0 1.2em 1.5em;
   text-align: right;
+  text-decoration: none;
   transition: 0.3s ease-in-out;
+  width: 100%;
 }
 
-#navbar a:hover {
-  scale: 0.95;
+#navbar a:hover,
+#navbar a:focus {
   color: #bdbfc7;
+  scale: 0.95;
 }
