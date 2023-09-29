@@ -1,11 +1,116 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles/navbar.css" />
+    <link rel="stylesheet" href="styles/normalize.css" />
+    <link rel="stylesheet" href="styles/style.css" />
     <title>My Lib - Formulários</title>
-</head>
-<body>
-    
-</body>
+  </head>
+  <body>
+    <nav id="navbar">
+      <img src="imagens/perfil.png" alt="" />
+      <a href="index.html">Home</a>
+      <a href="tipografia.html">Tipografia</a>
+      <a href="cards.html">Cards</a>
+      <a href="listas.html">Listas</a>
+      <a href="formulario.html">Formulário</a>
+      <a href="botoes.html">Botões</a>
+      <a href="tabelas.html">Tabelas</a>
+    </nav>
+
+    <main id="main">
+      <section class="quiz-and-contact">
+        <h3>Entre em contato</h3>
+
+        <div class="contactContainer">
+          <form class="contactContainer__form">
+            <div class="contactContainer__form__name-email">
+              <div class="name">
+                <label for="name">Nome</label>
+                <input
+                  type="text"
+                  name="name"
+                  id="name"
+                  placeholder="Nome completo"
+                />
+              </div>
+
+              <div class="email">
+                <label for="email">Email</label>
+                <input type="email" name="email" id="email" />
+              </div>
+            </div>
+
+            <div class="contactContainer__form__message">
+              <label for="message">Digite sua mensagem</label>
+              <textarea
+                name="message"
+                id="message"
+                cols="30"
+                rows="8"
+              ></textarea>
+            </div>
+
+            <button type="submit">Enviar</button>
+          </form>
+
+          <address class="contactContainer__address">
+            <p>Endereço 1234 Somewhere Rd. Nashville, TN 00000 United States</p>
+            <p>Telefone 000-000-000</p>
+            <p>Email email@server.com</p>
+          </address>
+        </div>
+      </section>
+
+      <section class="quiz-and-contact">
+        <h3>Quiz</h3>
+        <form class="quiz" id="quizForm">
+          <label for="language">Qual sua linguagem preferida?</label>
+          <select name="language" id="language">
+            <option value="null">Selecione</option>
+            <option value="html">HTML</option>
+            <option value="css">CSS</option>
+            <option value="js">Javascript</option>
+          </select>
+
+          <div class="prioridades">
+            <label
+              >Baixa Prioridade
+              <input type="radio" name="prioridade" value="baixa" />
+            </label>
+            <label
+              >Média Prioridade
+              <input type="radio" name="prioridade" value="media" />
+            </label>
+            <label
+              >Alta Prioridade
+              <input type="radio" name="prioridade" value="alta" />
+            </label>
+          </div>
+
+          <label class="checkbox-margin checkbox">
+            <input type="checkbox" name="copy" value="true" /> Envie-me uma
+            cópia
+          </label>
+          <label class="checkbox">
+            <input type="checkbox" name="humano" value="true" /> Sou um humano
+          </label>
+
+          <div class="buttons_quiz">
+            <button type="button" onclick="limparFormulario()">Limpar</button>
+            <button type="submit">Enviar</button>
+          </div>
+        </form>
+      </section>
+    </main>
+
+    <script>
+      function limparFormulario() {
+        var formulario = document.getElementById("quizForm");
+        formulario.reset();
+      }
+    </script>
+  </body>
 </html>

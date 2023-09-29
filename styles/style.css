@@ -9,6 +9,7 @@ ROBOTO PESO: 300, 400 e 700 */
   --pumpkin-orange: #ff7833;
   --slate-gray: #444856;
   --white: #e7e7e7;
+  --cloud-gray: #b9bdc8;
 }
 
 body {
@@ -161,4 +162,220 @@ code {
     flex-shrink: 0;
     flex-basis: 0%; */
   flex: 1 0 0%;
+}
+
+/* LISTAS */
+
+.roman ul {
+  list-style-type: upper-roman;
+}
+ul li {
+  list-style-type: disc;
+}
+
+ol li:not(.div-roman li) {
+  list-style-type: decimal;
+}
+
+.list-wrapper {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px; /* Espaço entre as listas */
+}
+
+.list-wrapper div {
+  padding: 10px;
+}
+
+.list-wrapper h3 {
+  margin-top: 0;
+}
+
+.list {
+  list-style: none;
+  padding: 0;
+}
+
+.list-alternate li {
+  list-style-type: none;
+  border-bottom: 1px solid var(--white);
+  transform: translateX(-40px);
+}
+
+li {
+  --white: #e7e7e7;
+  color: var(--white);
+  padding: 0.5em 0;
+}
+
+/* FORMULARIO */
+.contactContainer {
+  display: flex;
+  width: 90%;
+  gap: 5em;
+}
+
+.contactContainer form {
+  display: flex;
+  flex-direction: column;
+  gap: 2em;
+}
+
+.contactContainer__form__name-email {
+  display: flex;
+  gap: 1.5em;
+}
+
+.name,
+.email {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+}
+
+.contactContainer__form__message {
+  display: flex;
+  flex-direction: column;
+}
+
+.contactContainer label {
+  margin-bottom: 0.4em;
+}
+
+.contactContainer input,
+.contactContainer textarea {
+  border-radius: 4px;
+  outline: none;
+  border: none;
+  background-color: var(--cloud-gray);
+}
+
+.contactContainer input {
+  height: 2em;
+  padding: 4px 6px;
+}
+
+.contactContainer textarea {
+  resize: none;
+  padding: 0.5em;
+}
+
+label {
+  color: var(--white);
+}
+
+.quiz label {
+  display: flex;
+  gap: 1em;
+}
+
+label[for="language"],
+select {
+  display: flex;
+}
+
+select {
+  background-color: var(--cloud-gray);
+  width: 488px;
+  height: 2em;
+  outline: none;
+}
+
+form button {
+  padding: 0.8em 1.6em;
+  border-radius: 3px;
+  margin: 0 auto;
+  border: 0.1px solid black;
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px,
+    rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px,
+    rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+  background-color: var(--slate-gray);
+  color: var(--white);
+  transition: transform 0.4s ease-in-out;
+}
+
+form button:hover {
+  cursor: pointer;
+  background-color: #3a3d49;
+  transform: scale(1.05);
+}
+
+.prioridades {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 1em;
+}
+
+.prioridades label:nth-child(1),
+.checkbox-margin,
+.buttons_quiz button {
+  margin-top: 1em;
+}
+
+.checkbox {
+  margin-bottom: 0.5em;
+}
+
+.buttons_quiz {
+  max-width: 488px;
+  display: flex;
+  gap: 1.5em;
+}
+
+.buttons_quiz button {
+  flex-grow: 1;
+}
+
+/* BOTÕES */
+#buttons_top,
+#buttons_bottom {
+  display: flex;
+  width: 70%;
+}
+
+#buttons_top button {
+  padding: 0.8em 1.6em;
+}
+
+#buttons_bottom button {
+  padding: 1.6em 4em;
+}
+
+#buttons_top button,
+#buttons_bottom button {
+  border: none;
+}
+
+#buttons_top button:hover,
+#buttons_bottom button:hover {
+  cursor: pointer;
+}
+
+#buttons_top article,
+#buttons_bottom article {
+  flex-grow: 1;
+}
+
+#buttons_top article:first-child button,
+#buttons_bottom article:first-child button {
+  background-color: #24252d;
+  color: var(--white);
+  border-radius: 3px;
+}
+
+#buttons_top article:nth-child(2) button,
+#buttons_bottom article:nth-child(2) button {
+  outline: #24252d 1px solid;
+  background-color: transparent;
+  color: var(--white);
+  border-radius: 3px;
+}
+
+#buttons_top article:first-child button:nth-child(3),
+#buttons_top article:nth-child(2) button:nth-child(3),
+#buttons_bottom article:first-child button:nth-child(3),
+#buttons_bottom article:nth-child(2) button:nth-child(3) {
+  scale: 1.2;
+  margin-left: 1.5em;
 }
