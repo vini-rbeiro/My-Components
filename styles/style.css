@@ -379,3 +379,39 @@ form button:hover {
   scale: 1.2;
   margin-left: 1.5em;
 }
+
+/* TABELAS */
+.table {
+  width: 100%;
+  border-collapse: collapse;
+  color: var(--white);
+}
+
+.table td:last-child,
+.table th:last-child {
+  text-align: right;
+}
+
+.table td,
+.table th {
+  padding: 1.6rem;
+}
+
+.table:not(.table-alternate) td,
+.table:not(.table-alternate) th {
+  border-bottom: 2px solid #31333b;
+}
+
+.table th {
+  text-transform: uppercase;
+  text-align: left;
+}
+
+.table-alternate tbody tr:nth-child(odd) {
+  background-color: #2f3034;
+}
+
+.table-verticalLines td:not(:last-child),
+.table-verticalLines th:not(:last-child) {
+  border-right: 1px solid #1d1d1d;
+}
